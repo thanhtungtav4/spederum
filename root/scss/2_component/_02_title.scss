@@ -15,3 +15,21 @@
     font-size: 1.5rem;
 	line-height: 1.5;
 }
+.tab{
+	@include flex-jbetween;
+	&__menu{
+		@include flex;
+		a{
+			@include flex;
+			align-items: center;
+			text-decoration: none;
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: #686b6e;
+			padding: 0 10px;
+			i{
+				margin: 10px;
+			}
+		}
+	}
+}
