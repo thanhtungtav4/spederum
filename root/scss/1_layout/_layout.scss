@@ -9,3 +9,16 @@
 	margin: 20px auto;
 	max-width: 1200px;
 }
+.row{
+	@include flex;
+	margin: 20px 0;
+	.col-9{
+		width: calc(100% - 33.3%);
+		@include sp{
+			width: 100%;
+		}
+	}
+	.col-3{
+		width: 33.3%;
+	}
+}
