@@ -17,6 +17,7 @@
 }
 .tab{
 	@include flex-jbetween;
+	border-bottom: 1px solid slategrey;
 	&__menu{
 		@include flex;
 		a{
@@ -28,8 +29,29 @@
 			color: #686b6e;
 			padding: 0 10px;
 			i{
-				margin: 10px;
+				margin-right: 10px;
 			}
+			span {
+				padding-left: 10px;
+			}
+			&::after{
+				content: '';
+				display: block;
+				width: 0;
+				height: 2px;
+				background: #3199d5;
+				transition: width .3s;
+			}
+			&:hover{
+				color: #3199d5;
+				&::after{
+					width: 100%;
+				}
+			}
+
 		}
+	}
+	.m-ttl2{
+		margin-bottom: 0;
 	}
 }
