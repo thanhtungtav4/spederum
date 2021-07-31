@@ -1,0 +1,107 @@
+.m-news{
+    @include flex;
+    margin-bottom: 4rem;
+    padding: 0 20px;
+    a{
+        text-decoration: none;
+        color: #161616;
+    }
+    &__img{
+        height: 176px;
+        position: relative;
+        width: 100%;
+        margin-bottom: 1rem;
+        img{
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__heading{
+        @include flex-jbetween;
+        a{
+            padding-right: 5px;
+            text-transform: uppercase;
+        }
+    }
+    &__cate{
+      font-size: 1rem;
+      span{
+        border-left: 1px solid;
+        padding-left: 5px;
+      }
+    }
+    &__info{
+        @include flex-jbetween;
+    }
+    &__auth{
+        @include flex;
+        align-items: center;
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+    &__ext{
+        margin-bottom: 1rem;
+    }
+    &__name{
+        font-weight: 600;
+    }
+    &__date{
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &__more{
+        @include flex;
+        align-items: center;
+        a{
+            margin: 0 5px;
+            @include flex;
+            span{
+                margin: 0 5px;
+            }
+        }
+    }
+    &__item{
+        margin-bottom: 2.5rem;
+    }
+    &__big{
+        width: 380px;
+        margin-right: 2.5rem;
+        @include sp{
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+    &__smail{
+        @include pc{
+            width: calc(100% - 405px);
+        }
+        .m-news{
+            &__item{
+                @include pc{
+                    @include flex;
+                }
+            }
+            &__img{
+               @include pc{
+                height: 140px;
+                width: 225px;
+                margin-right: 12px;
+               }
+            }
+            &__content{
+                @include pc{
+                    width: calc(100% - 237px);
+                }
+            }
+        }
+    }
+}

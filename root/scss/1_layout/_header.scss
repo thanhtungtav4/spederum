@@ -1,0 +1,115 @@
+/*------------------------------------------------------------
+	Header
+------------------------------------------------------------*/
+.c-header {
+	width: 100%;
+	padding: 0 20px;
+	border-bottom: 1px solid rgba(226,232,240,1);
+    box-shadow: 0 10px 15px -3px rgba(47,181,250,.05),0 4px 6px -2px rgba(47,181,250,.025);
+	@include sp{
+		padding: 0 5px;
+	}
+	&__inner{
+		text-align: center;
+		transition: 0.3s ease-in-out;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+	&__nav{
+		&Top{
+			margin: 10px;
+			@include flex-jbetween;
+			@include sp{
+				margin: 5px;
+			}
+		}
+		&Bottom{
+			@include flex-jbetween;
+			height: 40px;
+		}
+	}
+	&__logo{
+		img{
+			width: 179px;
+			height: 40px;
+			vertical-align: middle;
+			@include sp{
+				text-align: left;
+				width: 30px;
+				height: 40px;
+			}
+		}
+	}
+	&__img{
+		img{
+			vertical-align: middle;
+		}
+	}
+	&__icon{
+		width: calc(100% - 179px);
+		@include sp{
+			width: calc(100% - 30px);
+		}
+		@include flex;
+		justify-content: flex-end;
+		li{	
+			a{
+				@include flex-center;
+				width: 40px;
+				height: 40px;
+				&:hover{
+					background: rgba(227,235,246,.5);
+				}
+				i{
+					color: #969696;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	&__menu{
+		width: 216px;
+		@include flex-center;
+		&.m-onlysp{
+			@include sp{
+				display: flex;
+			}
+		}
+		span{
+			margin: 5px;
+		}
+		&--scoll{
+			width: calc(100% - 216px);
+			@include flex;
+			justify-content: flex-end;
+			align-items: center;
+			li{
+				a{
+					padding: 8px 15px 0;
+					text-decoration: none;
+					font-size: 1.3rem;
+					text-transform: uppercase;
+					font-weight: 500;
+					line-height: 1.5;
+					display: inline-block;
+					color: #666;
+					&::after{
+						content: '';
+						display: block;
+						width: 0;
+						height: 1px;
+						background: #000;
+						transition: width .3s;
+						margin-top: 3px;
+					}
+					&:hover{
+						color: #000;
+						&::after{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
