@@ -72,17 +72,32 @@
     &__item{
         margin-bottom: 2.5rem;
     }
+    &.is_row{
+        .m-news{
+            &__item{
+                margin: 0 auto;
+                width: calc(33.3% - 15px);
+            }
+        }
+    }
     &__big{
         width: 380px;
         margin-right: 2.5rem;
+        @include tb{
+            width: 280px;
+        }
         @include sp{
             max-width: 100%;
+            width: 100%;
             margin-right: 0;
         }
     }
     &__smail{
         @include pc{
             width: calc(100% - 405px);
+        }
+        @include tb{
+            width: calc(100% - 305px);
         }
         .m-news{
             &__item{
@@ -96,10 +111,18 @@
                 width: 225px;
                 margin-right: 12px;
                }
+               @include tb{
+                   width: 180px;
+                   margin-right: 10px;
+               }
             }
             &__content{
                 @include pc{
                     width: calc(100% - 237px);
+                    
+                }
+                @include tb{
+                    width: calc(100% - 190px);
                 }
             }
         }
