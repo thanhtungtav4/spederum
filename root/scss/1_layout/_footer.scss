@@ -23,7 +23,7 @@
 	}
 	&__menu{
 		@include flex;
-		justify-content: center;
+		justify-content: flex-end;
 		li{
 			padding: 0 15px;
 			a{
@@ -32,17 +32,40 @@
 				color: #666;
 				font-weight: bold;
 			}
+			@include sp{
+				padding: 0 5px;
+				a{
+					font-size: 1.3rem;
+					font-weight: 500;
+				}
+			}
 		}
 	}
 	&__bottom{
 		max-width: 1440px;
 		margin: 3rem auto;
-		@include flex-jbetween;
 		align-items: center;
 		color:#666;
 		align-items: flex-end;
+		@include pc{
+			@include flex-jbetween;
+		}
+		@include sp{
+			margin-bottom: 1rem;
+		}
 	}
 	&__info{
 		text-align: left;
+		line-height: 1.5;
+		@include sp{
+			width: 100%;
+		}
+	}
+	&__name{
+		@include sp{
+			margin-top: 2rem;
+			text-align: left;
+		}
+
 	}
 }
