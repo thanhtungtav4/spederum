@@ -6,6 +6,10 @@
 	padding: 0 20px;
 	border-bottom: 1px solid rgba(226,232,240,1);
     box-shadow: 0 10px 15px -3px rgba(47,181,250,.05),0 4px 6px -2px rgba(47,181,250,.025);
+	background-color: white;
+	position: fixed;
+	top: 0;
+	z-index: 9;
 	@include sp{
 		padding: 0 5px;
 	}
@@ -108,6 +112,50 @@
 							width: 100%;
 						}
 					}
+				}
+			}
+		}
+	}
+	&__togge{
+		position: fixed;
+		@include flex;
+		background-color: white;
+		padding: 2rem;
+		width: 100%;
+		z-index: 10;
+		max-width: 1440px;
+		border: 1px solid rgba(226,232,240,1);
+		box-shadow: 0 10px 15px -3px rgba(47,181,250,.05),0 4px 6px -2px rgba(47,181,250,.025);
+		opacity: 0;
+		visibility: hidden;
+		transition: visibility 0s .3s, opacity .3s linear;
+		&.is_active{
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.3s linear;
+		}
+		a{
+			text-decoration: none;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+		&--item {
+			width: calc(25% - 16px);
+			margin-left: 8px;
+			margin-right: 8px;
+			a{
+				color: #000;
+				font-weight: 500;
+				@include flex;
+				align-items: center;
+				padding: 8px 10px;
+				border: 1px solid rgba(226,232,240,1);
+				margin-bottom: 20px;
+				img{
+					width: 30px;
+					height: 30px;
+					border-radius: 3px;
+					margin-right: 8px;
 				}
 			}
 		}
