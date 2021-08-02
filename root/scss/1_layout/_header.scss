@@ -117,9 +117,6 @@
 			li{
 				@include sp{
 					width: 100%;
-					padding: 8px 10px;
-					border: 1px solid rgba(226,232,240,1);
-					margin-bottom: 20px;
 				}
 				a{
 					padding: 8px 15px 0;
@@ -130,6 +127,12 @@
 					line-height: 1.5;
 					display: inline-block;
 					color: #666;
+					@include sp{
+						width: 100%;
+						padding: 8px 10px;
+						border: 1px solid rgba(226,232,240,1);
+						margin-bottom: 20px;
+					}
 					@include pc{
 						&::after{
 							content: '';
