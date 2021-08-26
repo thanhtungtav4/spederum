@@ -68,10 +68,13 @@
 	@include flex;
 	flex-direction: column;
 	top: 20%;
-	left: calc((100% - 800px) / 2 - 14vw);
+	left: calc((100% - 800px) / 2 - 11vw);
 	transition: opacity .25s ease-in-out;
 	justify-content: center;
     align-items: center;
+	@include sp{
+		opacity: 0;
+	}
 	&__auth{
 		img{
 			border-radius: 50%;
