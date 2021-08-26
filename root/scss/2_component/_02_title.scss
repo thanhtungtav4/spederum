@@ -8,6 +8,9 @@
     padding-left: 16px;
 	text-transform: uppercase;
 	margin: 15px 0;
+	@include sp{
+		font-size: 1.5rem;
+	}
 }
 .m-title{
 	margin-bottom: .5rem;
@@ -29,8 +32,15 @@
 			font-weight: 600;
 			color: #686b6e;
 			padding: 0 10px;
+			@include sp{
+				font-size: 1.1rem;
+				padding: 0 10px 0 0;
+			}
 			i{
 				margin-right: 10px;
+				@include sp{
+					margin-right: 5px;
+				}
 			}
 			span {
 				padding-left: 10px;
