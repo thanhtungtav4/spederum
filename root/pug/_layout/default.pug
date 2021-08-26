@@ -4,6 +4,7 @@ block vars
   -title        = ''
   -description  = ''
   -keywords     = ''
+  -image     = ''
   -pageID       = ''
   -path         = ''
 
@@ -18,8 +19,22 @@ html
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap' rel='stylesheet')
-    script(crossorigin='' src='https://unpkg.com/react@17/umd/react.development.js')
-    script(crossorigin='' src='https://unpkg.com/react-dom@17/umd/react-dom.development.js')
+    // Primary Meta Tags
+    meta(name='title' content=title)
+    meta(name='description' content=description)
+    // Open Graph / Facebook
+    meta(property='og:type' content='website')
+    meta(property='og:url' content=path)
+    meta(property='og:title' content=title)
+    meta(property='og:description' content=description)
+    meta(property='og:image' content=image)
+    // Twitter
+    meta(property='twitter:card' content='summary_large_image')
+    meta(property='twitter:url' content=path)
+    meta(property='twitter:title' content=title)
+    meta(property='twitter:description' content=description)
+    meta(property='twitter:image' content=image)
+
 
 
   body
