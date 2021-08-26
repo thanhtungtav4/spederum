@@ -18,6 +18,7 @@
 .tab{
 	@include flex-jbetween;
 	border-bottom: 1px solid slategrey;
+	margin-bottom: 2rem;
 	&__menu{
 		@include flex;
 		a{

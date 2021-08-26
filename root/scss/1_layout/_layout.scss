@@ -13,18 +13,25 @@
 .row{
 	@include flex;
 	margin: 20px 0;
-	.col-9{
-		width: calc(100% - 33%);
-		@include sp{
-			width: 100%;
-		}
-	}
+	padding: 10px;
 	.col-3{
-		width: 30%;
-		margin-left: 3%;
+		width: 33%;
 		@include sp{
 			width: 100%;
 			margin: 0 auto;
+		}
+	}
+	.col-4{
+		width: 40%;
+	}
+	.col-6{
+		width: calc(100% - 40%);
+	}
+	.col-9{
+		width: calc(100% - 33%);
+		padding-right: 20px;
+		@include sp{
+			width: 100%;
 		}
 	}
 }
