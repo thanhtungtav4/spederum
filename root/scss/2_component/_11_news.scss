@@ -6,11 +6,15 @@
         text-decoration: none;
         color: #161616;
     }
+    .m-title{
+        @include chunk-txt;
+    }
     &__img{
         height: 176px;
         position: relative;
         width: 100%;
         margin-bottom: 1rem;
+        flex-shrink: 0;
         img{
             border-radius: 3px;
             position: absolute;
@@ -37,6 +41,7 @@
     }
     &__info{
         @include flex-jbetween;
+        margin-top: auto
     }
     &__auth{
         @include flex;
@@ -50,6 +55,8 @@
     }
     &__ext{
         margin-bottom: 1rem;
+        @include chunk-txt;
+        -webkit-line-clamp: 3;
     }
     &__name{
         font-weight: 600;
@@ -69,8 +76,16 @@
             }
         }
     }
+    &__content{
+        flex: 1;
+        @include flex;
+        flex-direction: column;
+
+    }
     &__item{
         margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
     }
     &.is_row{
         .m-news{
@@ -102,13 +117,18 @@
         @include tb{
             width: calc(100% - 305px);
         }
+        .m-title{
+            -webkit-line-clamp: 1;
+        }
         .m-news{
             &__item{
                 @include pc{
                     @include flex;
+                    flex-direction: row;
                 }
             }
             &__img{
+                margin-bottom: 0;
                @include pc{
                 height: 140px;
                 width: 225px;
@@ -119,10 +139,15 @@
                    margin-right: 10px;
                }
             }
+            &__ext{
+                @include chunk-txt;
+                @include  sp{
+                    -webkit-line-clamp: 3;
+                }
+            }
             &__content{
                 @include pc{
                     width: calc(100% - 237px);
-                    
                 }
                 @include tb{
                     width: calc(100% - 190px);
@@ -132,12 +157,14 @@
     }
 }
 .m-content{
-    margin-top: 1rem;
-    padding: 15px 10px;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
     position: relative;
+    &__inner{
+        margin-top: 1rem;
+        padding: 15px 10px;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+    }
     &__head{
         margin-top: 1rem;
         padding: 15px 10px;

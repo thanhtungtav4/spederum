@@ -46,6 +46,9 @@
 		}
 		&__content{
 			width: calc(100% - 60px);
+			h2{
+				@include chunk-txt;
+			}
 		}
 		&__author{
 			.m-author{
@@ -68,7 +71,7 @@
 	@include flex;
 	flex-direction: column;
 	top: 20%;
-	left: calc((100% - 800px) / 2 - 11vw);
+	left: calc((100% - 800px) / 2 - 12vw);
 	transition: opacity .25s ease-in-out;
 	justify-content: center;
     align-items: center;
@@ -89,6 +92,33 @@
 		row-gap: 12px;
 		flex-direction: column;
 		text-align: center;
+	}
+	&__share{
+		opacity: 0;
+		margin: 20px 0;
+		transition: opacity .25s ease-in-out;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 8px;
+		&.is_active{
+			opacity: 1;
+		}
+		&--item{
+			margin: 0 auto;
+			align-self: center;
+			&:nth-last-of-type(3){
+				i{
+					border: 1px solid #666;
+					border-radius: 50%;
+					padding: 3px;
+				}
+			}
+			i{
+				@include flex;
+				align-items: center;
+				
+			}
+		}
 	}
 
 }

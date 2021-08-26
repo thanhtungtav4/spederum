@@ -393,10 +393,9 @@
     box-sizing: border-box;
     position: relative;
     display: block;
-    transform: scale(var(--ggs, 1));
     width: 6px;
     height: 6px;
-    background: currentColor;
+    background: #666;
     border-radius: 100px;
     box-shadow: 10px -6px 0, 10px 6px 0;
   
@@ -408,7 +407,7 @@
       border-radius: 3px;
       width: 10px;
       height: 2px;
-      background: currentColor;
+      background: #666;
       left: 2px;
     }
   
@@ -420,7 +419,7 @@
       border-radius: 3px;
       width: 10px;
       height: 2px;
-      background: currentColor;
+      background: #666;
       left: 2px;
       top: 0;
       transform: rotate(-35deg);
@@ -431,4 +430,48 @@
       transform: rotate(35deg);
     }
   } 
-   
+  .gg-link {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: rotate(-45deg) scale(var(--ggs, 1));
+    width: 8px;
+    height: 2px;
+    background: #666;
+    border-radius: 4px;
+  
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 3px;
+      width: 8px;
+      height: 10px;
+      border: 2px solid;
+      top: -4px;
+    }
+  
+    &::before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 3px;
+      width: 8px;
+      height: 10px;
+      border: 2px solid;
+      top: -4px;
+      border-right: 0;
+      border-top-left-radius: 40px;
+      border-bottom-left-radius: 40px;
+      left: -6px;
+    }
+  
+    &::after {
+      border-left: 0;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      right: -6px;
+    }
+  }   
