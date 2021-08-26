@@ -124,5 +124,11 @@
 			}
 		}
 	}
+	#btn_share{
+		width: 25px;
+		height: 25px;
+		@include flex;
+		align-items: center;
+	}
 
 }
