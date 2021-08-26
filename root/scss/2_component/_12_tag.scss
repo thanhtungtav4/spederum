@@ -1,0 +1,22 @@
+.m-tag{
+    @include flex;
+    li{
+        margin: 10px 0;
+        a{
+            text-decoration: none;
+            color: rgba(0,0,0,.6);
+            background: rgba(0,0,0,.05);
+            line-height: 1.5rem;
+            margin: 0 5px 5px 0;
+            padding: 8px 13px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        &:hover{
+            a{
+                background: rgba(226,232,240,1);
+            }
+        }
+    }
+    
+}

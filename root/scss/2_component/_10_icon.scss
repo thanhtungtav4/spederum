@@ -207,6 +207,7 @@
     transform: scale(var(--ggs,1));
     width: 14px;
     height: 16px;
+    margin: 0 auto;
     &:hover{
         background-color: #969696;
     }
@@ -359,3 +360,75 @@
     bottom: -3px;
     right: -14px
    } 
+/// xcxxxxxxxxxxxxxxxx
+   .gg-shape-triangdown {
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 17px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid
+   }
+   
+   .gg-shape-triangdown,
+   .gg-shape-triangdown::before {
+    display: block;
+    box-sizing: border-box;
+    border-right: 3px solid transparent
+   }
+   
+   .gg-shape-triangdown::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 3px solid transparent;
+    transform: rotate(45deg) skew(10deg,10deg);
+    left: -2px;
+    bottom: -13px
+   } 
+   .gg-share {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    border-radius: 100px;
+    box-shadow: 10px -6px 0, 10px 6px 0;
+  
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 3px;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+      left: 2px;
+    }
+  
+    &::before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 3px;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+      left: 2px;
+      top: 0;
+      transform: rotate(-35deg);
+    }
+  
+    &::after {
+      bottom: 0;
+      transform: rotate(35deg);
+    }
+  } 
+   
