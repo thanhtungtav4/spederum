@@ -86,6 +86,10 @@
         margin-bottom: 2.5rem;
         display: flex;
         flex-direction: column;
+        transition: box-shadow .3s ease-in-out;
+        &:hover{
+            box-shadow: 0 0 10px #4040412d;
+        }
     }
     &.is_row{
         .m-news{
