@@ -125,10 +125,11 @@
 		}
 	}
 	#btn_share{
-		width: 25px;
-		height: 25px;
+		width: 18px;
+		height: 18px;
 		@include flex;
 		align-items: center;
+		cursor: pointer;
 	}
 
 }

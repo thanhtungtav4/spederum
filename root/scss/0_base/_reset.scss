@@ -165,6 +165,10 @@ img {
 	vertical-align: middle;
 	max-width: 100%;
 	height: auto;
+	transition: .3s ease-in-out;
+	&:hover{
+		transform: scale(1.05);
+	}
 }
 
 a {
