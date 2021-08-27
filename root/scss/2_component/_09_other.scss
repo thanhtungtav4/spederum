@@ -132,3 +132,21 @@
 	}
 
 }
+.m-pagination{
+	@include flex-center;
+	margin: 1.5rem 0 4.5rem;
+	li{
+		&:not(:last-child){
+			margin-right: 3px;
+		}
+		a{
+			padding: 5px 10px;
+		}
+		&.is_active, &:hover{
+			a{
+				color: white;
+				background-color: #2fb5fa;
+			}
+		}
+	}
+}
