@@ -475,3 +475,27 @@
       right: -6px;
     }
   }   
+  .gg-chevron-up-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border: 2px solid;
+    border-radius: 4px;
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      transform: rotate(-45deg);
+      left: 12px;
+      bottom: 8px;
+      transition: .3s ease-in-out;
+    }
+  }
+  
