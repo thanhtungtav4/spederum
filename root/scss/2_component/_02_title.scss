@@ -4,7 +4,7 @@
 .m-ttl2{
 	border-left: 4px solid #3199d5;
     font-size: 2rem;
-	color: #292929;
+	color: $color1;
     padding-left: 16px;
 	text-transform: uppercase;
 	margin: 15px 0;
@@ -30,7 +30,7 @@
 			text-decoration: none;
 			font-size: 1.5rem;
 			font-weight: 600;
-			color: #686b6e;
+			color: var(--sub-color);
 			padding: 0 10px;
 			@include sp{
 				font-size: 1.1rem;

@@ -27,7 +27,7 @@
 		padding: .75rem 1rem;
 		border-bottom: 1px solid #b5b5b5;
 		padding: 1rem 2rem;
-		color: rgba(74,85,104,1);
+		color: $color1;
 	}
 	&-body{
 		padding: 2rem;
@@ -51,7 +51,7 @@
 			}
 			h2{
 				@include chunk-txt;
-				color: #666;
+				color: var(--sub-color);
 			}
 		}
 		&__author{
@@ -60,7 +60,7 @@
 				font-weight: bold;
 			}
 			span{
-				color: #b5b5b5;
+				color: var(--sub-color);
 				&::before{
 					content: "- ";
 				}
@@ -142,6 +142,7 @@
 		}
 		a{
 			padding: 5px 10px;
+			color: $color1;
 		}
 		&.is_active, &:hover{
 			a{

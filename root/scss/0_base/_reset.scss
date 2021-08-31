@@ -2,6 +2,22 @@
 /*------------------------------------------------------------
 	Reset
 ------------------------------------------------------------*/
+:root {
+	--background: white;
+	--color-black: #000;
+	--color-gray: #ccc;
+	--grey-dark-five: #2B2B2B;
+	--sub-color: #666;
+
+	
+  }
+  [data-theme='dark'] {
+	--background: #494e51;
+	--color-black: white;
+	--color-gray: #ccc;
+	--grey-dark-five: #2B2B2B;
+	--sub-color: #ccc;
+  }
 html,
 body,
 div,
@@ -91,6 +107,7 @@ main {
 
 html {
 	font-size: 62.5%;
+	background-color: var(--background);
 }
 
 body {

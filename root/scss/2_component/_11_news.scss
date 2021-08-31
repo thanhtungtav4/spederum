@@ -8,6 +8,7 @@
     }
     .m-title{
         @include chunk-txt;
+        color: $color1;
     }
     &__img{
         height: 176px;
@@ -34,6 +35,10 @@
     }
     &__cate{
       font-size: 1rem;
+      color: $color1;
+      a{
+        color: $color1;
+      }
       span{
         border-left: 1px solid;
         padding-left: 5px;
@@ -60,10 +65,12 @@
     }
     &__name{
         font-weight: 600;
+        color: $color1;
     }
     &__date{
         font-weight: 500;
         font-size: 1.2rem;
+        color: $color1;
     }
     &__more{
         @include flex;
@@ -73,6 +80,7 @@
             @include flex;
             span{
                 margin: 0 5px;
+                color: $color1;
             }
         }
     }

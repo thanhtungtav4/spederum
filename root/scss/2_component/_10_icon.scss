@@ -1,196 +1,7 @@
 /*------------------------------------------------------------
 	Icon
 ------------------------------------------------------------*/
-.gg-search {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 16px;
-    height: 16px;
-    border: 2px solid;
-    border-radius: 100%;
-    margin-left: -4px;
-    margin-top: -4px
-}
-.gg-search::after {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    border-radius: 3px;
-    width: 2px;
-    height: 8px;
-    background: currentColor;
-    transform: rotate(-45deg);
-    top: 10px;
-    left: 12px
-}
-.gg-mail,
-.gg-mail::after {
-    display: block;
-    box-sizing: border-box;
-    height: 14px;
-    border: 2px solid
-}
-.gg-mail {
-    overflow: hidden;
-    transform: scale(var(--ggs,1));
-    position: relative;
-    width: 18px;
-    border-radius: 2px
-}
-.gg-mail::after {
-    content: "";
-    position: absolute;
-    border-radius: 3px;
-    width: 14px;
-    transform: rotate(-45deg);
-    bottom: 3px;
-    left: 0
-}
-.gg-sun {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 24px;
-    height: 24px;
-    background:
-    linear-gradient(to bottom,
-    currentColor 4px,transparent 0)
-    no-repeat 5px -6px/2px 6px,
-    linear-gradient(to bottom,
-    currentColor 4px,transparent 0)
-    no-repeat 5px 14px/2px 6px,
-    linear-gradient(to bottom,
-    currentColor 4px,transparent 0)
-    no-repeat -8px 5px/6px 2px,
-    linear-gradient(to bottom,
-    currentColor 4px,transparent 0)
-    no-repeat 14px 5px/6px 2px;
-    border-radius: 100px;
-    box-shadow: inset 0 0 0 2px;
-    border: 6px solid transparent
-   }
-   
-   .gg-sun::after,
-   .gg-sun::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    border-right: 4px solid;
-    border-left: 4px solid;
-    left: -6px;
-    top: 5px
-   }
-   
-   .gg-sun::before {
-    transform: rotate(-45deg)
-   }
-   
-   .gg-sun::after {
-    transform: rotate(45deg)
-   } 
-   .gg-chevron-down {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 20px;
-    height: 20px;
-    border: 2px solid transparent;
-    border-radius: 100px
-   }
-   
-   .gg-chevron-down::after {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
-    transform: rotate(45deg);
-    left: 4px;
-    top: 2px
-   } 
-   .gg-album {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    width: 16px;
-    height: 16px;
-    transform: scale(var(--ggs,1));
-    border-left: 7px solid transparent;
-    border-right: 3px solid transparent;
-    border-bottom: 8px solid transparent;
-    box-shadow: 0 0 0 2px,
-    inset 6px 4px 0 -4px,
-    inset -6px 4px 0 -4px;
-    border-radius: 3px
-   }
-   
-   .gg-album::after,
-   .gg-album::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 2px;
-    height: 5px;
-    background: currentColor;
-    transform: rotate(46deg);
-    top: 5px;
-    right: 4px
-   }
-   
-   .gg-album::after {
-    transform: rotate(-46deg);
-    right: 2px
-   } 
-   @keyframes gg-doc {
-    0% { left: -16px }
-    60%,to { left: 0 }
-   }
-   
-   .gg-loadbar-doc {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    transform: scale(var(--ggs,1));
-    border: 2px solid transparent;
-    box-shadow: 0 0 0 2px;
-    border-radius: 1px;
-    width: 12px;
-    height: 14px;
-    overflow: hidden
-   }
-   
-   .gg-loadbar-doc::after,
-   .gg-loadbar-doc::before {
-    content: "";
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    height: 2px;
-    background: currentColor;
-    animation: gg-doc 1s linear infinite alternate
-   }
-   
-   .gg-loadbar-doc::before {
-    width: 14px;
-    box-shadow: -4px 4px 0
-   }
-   
-   .gg-loadbar-doc::after {
-    width: 5px;
-    top: 8px
-   } 
+
    .gg-bookmark,
    .gg-bookmark::after {
     display: block;
@@ -231,7 +42,7 @@
     width: 22px;
     height: 17px;
     border-left: 3px solid transparent;
-    border-bottom: 3px solid
+    border-bottom: 3px solid $color1;
    }
    
    .gg-shape-triangle,
@@ -246,8 +57,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    border-left: 3px solid;
-    border-top: 3px solid;
+    border-left: 3px solid $color1;
+    border-top: 3px solid $color1;
     border-bottom: 3px solid transparent;
     transform: rotate(45deg) skew(10deg,10deg);
     left: -2px;
@@ -262,7 +73,8 @@
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
     overflow: hidden;
-    box-sizing: border-box
+    box-sizing: border-box;
+    color:  $color1;
    }
    
    .gg-eye::after,
@@ -286,7 +98,7 @@
    .gg-eye::before {
     width: 8px;
     height: 8px;
-    border: 2px solid;
+    border: 2px solid $color1;
     bottom: 4px;
     left: 8px
    } 
@@ -294,8 +106,7 @@
     box-sizing: border-box;
     position: relative;
     display: block;
-    transform: scale(var(--ggs,1));
-    border: 2px solid;
+    border: 2px solid $color1;
     border-radius: 3px;
     width: 22px;
     height: 18px
@@ -310,7 +121,8 @@
     height: 2px;
     border-radius: 3px;
     background: currentColor;
-    bottom: 2px
+    bottom: 2px;
+    color: $color1;
    }
    
    .gg-transcript::before {
@@ -331,8 +143,8 @@
     transform: rotate(-45deg) scale(var(--ggs,1));
     width: 10px;
     height: 8px;
-    border-top: 2px solid;
-    border-right: 2px solid
+    border-top: 2px solid $color1;
+    border-right: 2px solid $color1;
    }
    
    .gg-trending::after,
@@ -356,18 +168,16 @@
     height: 0;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    border-left: 6px solid;
+    border-left: 6px solid $color1;
     bottom: -3px;
     right: -14px
    } 
-/// xcxxxxxxxxxxxxxxxx
    .gg-shape-triangdown {
     position: relative;
-    transform: scale(var(--ggs,1));
     width: 22px;
     height: 17px;
     border-left: 3px solid transparent;
-    border-bottom: 3px solid
+    border-bottom: 3px solid $color1;
    }
    
    .gg-shape-triangdown,
@@ -382,13 +192,88 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    border-left: 3px solid;
-    border-top: 3px solid;
+    border-left: 3px solid $color1;
+    border-top: 3px solid $color1;
     border-bottom: 3px solid transparent;
     transform: rotate(45deg) skew(10deg,10deg);
     left: -2px;
     bottom: -13px
    } 
+   [data-theme='light'] {
+   .gg-sun {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(to bottom,
+   currentColor 4px,transparent 0)
+   no-repeat 5px -6px/2px 6px,
+   linear-gradient(to bottom,
+   currentColor 4px,transparent 0)
+   no-repeat 5px 14px/2px 6px,
+   linear-gradient(to bottom,
+   currentColor 4px,transparent 0)
+   no-repeat -8px 5px/6px 2px,
+   linear-gradient(to bottom,
+   currentColor 4px,transparent 0)
+   no-repeat 14px 5px/6px 2px;
+    border-radius: 100px;
+    box-shadow: inset 0 0 0 2px;
+    border: 6px solid transparent;
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+  .gg-sun::after,
+  .gg-sun::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    border-right: 4px solid $color1;
+    border-left: 4px solid $color1;
+    left: -6px;
+    top: 5px;
+  }
+}
+   [data-theme='dark'] {
+    .gg-sun,
+   .gg-sun::after {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 50%
+   }
+   
+   .gg-sun {
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-135deg) scale(var(--ggs,1));
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color1;
+    border-bottom-color: transparent
+   }
+   
+   .gg-sun::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    top: 8px;
+    left: 2px;
+    color: $color1;
+   } 
+    }
+   
    .gg-share {
     box-sizing: border-box;
     position: relative;
@@ -407,7 +292,7 @@
       border-radius: 3px;
       width: 10px;
       height: 2px;
-      background: #666;
+      background: $color1;
       left: 2px;
     }
   
@@ -419,7 +304,7 @@
       border-radius: 3px;
       width: 10px;
       height: 2px;
-      background: #666;
+      background: $color1;
       left: 2px;
       top: 0;
       transform: rotate(-35deg);
@@ -437,7 +322,7 @@
     transform: rotate(-45deg) scale(var(--ggs, 1));
     width: 8px;
     height: 2px;
-    background: #666;
+    background: $color2;
     border-radius: 4px;
   
     &::after {
@@ -448,7 +333,7 @@
       border-radius: 3px;
       width: 8px;
       height: 10px;
-      border: 2px solid;
+      border: 2px solid $color1;
       top: -4px;
     }
   
@@ -460,7 +345,7 @@
       border-radius: 3px;
       width: 8px;
       height: 10px;
-      border: 2px solid;
+      border: 2px solid $color1;
       top: -4px;
       border-right: 0;
       border-top-left-radius: 40px;
@@ -481,7 +366,7 @@
     display: block;
     width: 36px;
     height: 36px;
-    border: 2px solid;
+    border: 2px solid $color1;
     border-radius: 4px;
     &::after {
       content: "";
@@ -490,12 +375,116 @@
       position: absolute;
       width: 10px;
       height: 10px;
-      border-top: 2px solid;
-      border-right: 2px solid;
+      border-top: 2px solid $color1;
+      border-right: 2px solid $color1;
       transform: rotate(-45deg);
       left: 12px;
       bottom: 8px;
       transition: .3s ease-in-out;
     }
   }
-  
+  .gg-album {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    transform: scale(var(--ggs,1));
+    border-left: 7px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 8px solid transparent;
+    box-shadow: 0 0 0 2px,
+   inset 6px 4px 0 -4px,
+   inset -6px 4px 0 -4px;
+    border-radius: 3px;
+    &::after {
+      transform: rotate(-46deg);
+      right: 2px;
+    }
+  }
+  .gg-album::after,
+  .gg-album::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 2px;
+    height: 5px;
+    background: currentColor;
+    transform: rotate(46deg);
+    top: 5px;
+    right: 4px;
+  }
+  .gg-search {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    border: 2px solid $color1;
+    border-radius: 100%;
+    margin-left: -4px;
+    margin-top: -4px;
+    &::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 3px;
+      width: 2px;
+      height: 8px;
+      background: currentColor;
+      transform: rotate(-45deg);
+      top: 10px;
+      left: 12px;
+      color: $color1;
+    }
+  }
+
+.gg-mail,
+.gg-mail::after {
+	display: block;
+	box-sizing: border-box;
+	height: 16px;
+	border: 2px solid $color1;
+}
+.gg-mail {
+	overflow: hidden;
+	transform: scale(var(--ggs,1));
+	position: relative;
+	width: 20px;
+	border-radius: 2px;
+	&::after {
+		content: "";
+		position: absolute;
+		border-radius: 3px;
+		width: 16px;
+		transform: rotate(-45deg);
+		bottom: 5px;
+		left: 0;
+	}
+}
+.gg-chevron-down {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	transform: scale(var(--ggs,1));
+	width: 22px;
+	height: 22px;
+	border: 2px solid transparent;
+	border-radius: 100px;
+	&::after {
+		content: "";
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-bottom: 2px solid $color1;
+		border-right: 2px solid $color1;
+		transform: rotate(45deg);
+		left: 4px;
+		top: 2px;
+	}
+}

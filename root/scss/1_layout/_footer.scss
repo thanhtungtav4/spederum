@@ -24,12 +24,13 @@
 	&__menu{
 		@include flex;
 		justify-content: flex-end;
+		
 		li{
 			padding: 0 15px;
 			a{
 				text-decoration: none;
 				font-size: 1.5rem;
-				color: #666;
+				color: var(--sub-color);
 				font-weight: bold;
 			}
 			@include sp{
@@ -57,11 +58,13 @@
 	&__info{
 		text-align: left;
 		line-height: 1.5;
+		color: var(--sub-color);
 		@include sp{
 			width: 100%;
 		}
 	}
 	&__name{
+		color: var(--sub-color);
 		@include sp{
 			margin-top: 2rem;
 			text-align: left;

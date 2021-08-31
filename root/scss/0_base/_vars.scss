@@ -3,12 +3,12 @@ $breaksp: 767px;
 $desktop-width: 1024px;
 
 // Common Colors
-$color1: #000;
-$color2: #fff;
+$color1: var(--color-black);
+$color2: var(--color-gray);
 $color3: #ccc;
 
 // Base Fonts
-$base-font-color:   #000;
+$base-font-color:   var(--color-black);
 $base-font-size:    14px;
 $base-font-weight:  400;
 $base-line-height:  1.4;
