@@ -95,6 +95,7 @@
         display: flex;
         flex-direction: column;
         transition: box-shadow .3s ease-in-out;
+        width: 100%;
         &:hover{
             box-shadow: 0 0 10px #4040412d;
         }
@@ -102,7 +103,7 @@
     &.is_row{
         .m-news{
             &__item{
-                margin: 0 auto;
+                margin: 0 auto 3rem;
                 width: calc(33.3% - 20px);
                 @include sp{
                     width: 100%;
