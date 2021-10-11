@@ -46,16 +46,22 @@
     }
     &__info{
         @include flex-jbetween;
-        margin-top: auto
+        margin-top: auto;
     }
     &__auth{
         @include flex;
         align-items: center;
-        img{
+        .image__auth{
             width: 40px;
             height: 40px;
+            display: inline-block;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 40px;
+            max-height: 40px;
             border-radius: 50%;
-            margin-right: 10px;
         }
     }
     &__ext{
@@ -66,6 +72,7 @@
     &__name{
         font-weight: 600;
         color: $color1;
+        margin-left: 10px;
     }
     &__date{
         font-weight: 500;
@@ -88,7 +95,7 @@
         flex: 1;
         @include flex;
         flex-direction: column;
-
+        padding: 5px;
     }
     &__item{
         margin-bottom: 2.5rem;
@@ -98,6 +105,7 @@
         width: 100%;
         &:hover{
             box-shadow: 0 0 10px #4040412d;
+            border-radius: 5px;
         }
     }
     &.is_row{
@@ -110,6 +118,27 @@
                     margin-bottom: 2.5rem;
                 }
             }
+            &__info{
+                padding: 5px;
+            }
+        }
+    }
+    &.is_slider{
+        .m-news{
+            &__item{
+                width: calc(100% - 20px);
+                @include sp{
+                    width: 100%;
+                }
+            }
+        }
+        .slick-prev, .slick-next{
+            display: none !important;
+        }
+        .slick-dots{
+            width: 100%;
+            left: 0;
+            right: 0;
         }
     }
     &.is_vertical{
@@ -214,6 +243,10 @@
     }
     &__img{
         margin: 1rem 0;
+        width: 100%;
+        max-width: 780px;
+        height: auto;
+        display: block;
     }
     &__body{
         p{

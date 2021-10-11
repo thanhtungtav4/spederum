@@ -9,6 +9,9 @@
 	margin: 20px auto;
 	max-width: 1200px;
 	padding-top: 101px;
+	@include sp{
+		padding-top: 60px;
+	}
 }
 .row{
 	@include flex;
