@@ -229,6 +229,11 @@
             height: 56px;
             border-radius: 50%;
         }
+        &--img{
+            width: 56px;
+            height: 56px;
+            display: inline-block;
+        }
         &--name{
             margin: 0 10px;
             @include flex;
@@ -271,6 +276,10 @@
         }
         img{
             margin: 0 auto;
+            border-radius: 8px;
+            @include sp{
+                height: unset !important;
+            }
         }
         blockquote{
             border-left: 4px solid #0099df;

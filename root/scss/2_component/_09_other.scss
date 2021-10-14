@@ -89,6 +89,11 @@
 			height: 60px;
 			object-fit: cover;
 		}
+		&--img{
+			width: 60px;
+			height: 60px;
+			display: inline-block;
+		}
 		margin: 5px auto 12px;
 	}
 	&__count, &__post, &__vote{
