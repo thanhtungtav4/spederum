@@ -4,7 +4,7 @@
     padding: 0 20px;
     a{
         text-decoration: none;
-        color: #161616;
+        color: var(--color-black);
     }
     .m-title{
         @include chunk-txt;
@@ -73,7 +73,17 @@
         font-weight: 600;
         color: $color1;
         margin-left: 10px;
-    }
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        @include sp{
+            -webkit-line-clamp: 1;
+            width: 70px;
+        }
+}
     &__date{
         font-weight: 500;
         font-size: 1.2rem;
@@ -217,7 +227,7 @@
     &__description{
         font-style: italic;
         font-size: 1.6rem;
-        color: #666;
+        color: var(--color-black);
         margin: 5px 0;
     }
     &__auth{
@@ -237,11 +247,11 @@
         &--name{
             margin: 0 10px;
             @include flex;
-            color: #666;
+            color: var(--color-black);
             flex-direction: column;
             a{
                 text-decoration: none;
-                color: #666;
+                color: var(--color-black);
                 font-weight: bold;
             }
         }
@@ -277,9 +287,9 @@
         img{
             margin: 0 auto;
             border-radius: 8px;
-            @include sp{
-                height: unset !important;
-            }
+            height: unset !important;
+            text-align: center;
+            display: block;
         }
         blockquote{
             border-left: 4px solid #0099df;

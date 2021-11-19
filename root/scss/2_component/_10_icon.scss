@@ -368,6 +368,7 @@
     height: 36px;
     border: 2px solid $color1;
     border-radius: 4px;
+    background-color: var(--background);
     &::after {
       content: "";
       display: block;
