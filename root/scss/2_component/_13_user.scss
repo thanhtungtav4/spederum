@@ -1,0 +1,60 @@
+.c-banner{
+    &__inner{
+        width: 100%;
+        height: 370px;
+        position: relative;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+            &:hover{
+                transform: none;
+            }
+        }
+    }
+}
+.widget{
+    &__user{
+        margin-top: -200px;
+        background: var(--background);
+        height: fit-content;
+        position: sticky;
+        top: 20%;
+        z-index: 1;
+        @include sp{
+            &.col-3{
+                margin: -250px 20px 0;
+                position: static;
+            }
+        }
+    }
+    &__avata{
+        width: 128px;
+        height: 128px;
+        position: relative;
+        align-items: center;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    &__name{
+        font-weight: bold;
+        font-size: 1.8rem;
+        margin: 1rem 0 0.3rem;
+    }
+    &__username{
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+}

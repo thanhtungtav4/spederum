@@ -31,6 +31,8 @@
 	}
 	&-body{
 		padding: 2rem;
+		@include flex-center;
+		flex-direction: column;
 	}
 	&-item{
 		@include flex;
@@ -261,4 +263,9 @@
 }
 .d-none{
 	display: none;
+}
+.is_sticky{
+	height: fit-content;
+	position: sticky;
+	top: 20%;
 }
